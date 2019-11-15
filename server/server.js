@@ -13,6 +13,7 @@ app.use(express.json());
 app.use(express.static(path.resolve(__dirname,'..','public')));
 
 app.use('/api/song/:id/comments', proxy({ target: 'http://ec2-13-56-194-113.us-west-1.compute.amazonaws.com/'}));
+app.use('/songs/:id', proxy({ target: 'http://ec2-34-208-139-238.us-west-2.compute.amazonaws.com'}));
 
 app.get('/', (_, response) => {
   response.send(express.static(__dirname, '..', 'public', 'index.html'));

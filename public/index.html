@@ -1,10 +1,63 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="http://ec2-13-56-149-18.us-west-1.compute.amazonaws.com/stylesheet.css" crossorigin="anonymous" />
-    <link rel="stylesheet" href="http://ec2-18-224-181-241.us-east-2.compute.amazonaws.com:3131/styles.css" crossorigin="anonymous" />
-    <link rel="stylesheet" href="http://ec2-54-193-53-101.us-west-1.compute.amazonaws.com/style.css" crossorigin="anonymous" />
-    <link rel="stylesheet" href="./proxy-styles.css" />
+    <!-- Song Timestamp Comments CSS -->
+    <link rel="stylesheet" href="https://jastdance.s3-us-west-2.amazonaws.com/css/stylesheet.css"/>
+    <!-- Song General Comments CSS -->
+    <link rel="stylesheet" href="https://sdc-jastdance.s3-us-west-2.amazonaws.com/styles.css"/>
+    <!-- Related Tracks CSS -->
+    <link rel="stylesheet" href="https://sdc-alex-bundle.s3-us-west-2.amazonaws.com/styles.css"/>
+    <style>
+      #bottom-content {
+        position: absolute;
+        top: 380px;
+        width: 1240px;
+        left: 1.5%;
+        right: 1.5%;
+      }
+      #comments-outer-container{
+        display: inline-block;
+        position: absolute;
+        left: 0px;
+        width: 875px;
+        background-color: white;
+        padding: 20px 30px;
+        padding-right: 0px;
+      }
+      #comments-inner-container {
+        height: 410px; 
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+      }
+      #Sidebar-outer-container {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        width: 331px;
+        background-color: white;
+        padding: 20px 30px;
+        padding-left: 0px;
+      }
+      #Sidebar ul {
+        list-style: none;
+      }
+      #Sidebar-inner-container {
+        height: 410px;
+        margin: 0px;
+        border: 0px;
+        padding: 0px;
+        padding-left: 25px;
+        padding-bottom: 50px;
+        border-left: 1px solid rgb(242, 242, 242);
+      }
+      #comments .comment-container {
+        position: relative;
+        top: auto;
+      }
+    </style>
   </head>
   <body>
     <div id="Display">This is the Active Display Module</div>
@@ -21,10 +74,14 @@
       </div>
     </div>
     <div id="player">This is the Active Player Module</div>
-
-    <script src="http://ec2-13-56-149-18.us-west-1.compute.amazonaws.com/bundle.js" crossorigin="anonymous"></script>
-    <script src="http://ec2-18-223-161-79.us-east-2.compute.amazonaws.com/bundle.js" crossorigin="anonymous"></script>
-    <script src="http://ec2-18-224-181-241.us-east-2.compute.amazonaws.com:3131/bundle.js" crossorigin="anonymous"></script>
-    <script src="http://ec2-54-193-53-101.us-west-1.compute.amazonaws.com/bundle.js" crossorigin="anonymous"></script>
+    
+    <!-- Song Timestamp Comments Bundle -->
+    <script src="https://jastdance.s3-us-west-2.amazonaws.com/js/bundle.js.gz"></script>
+    <!-- Song General Comments Bundle -->
+    <script src="https://sdc-jastdance.s3-us-west-2.amazonaws.com/bundle.js"></script>
+    <!-- Active Player Bundle -->
+    <script src="https://activeplayer.s3-us-west-2.amazonaws.com/bundle.js"></script>
+    <!-- Related Tracks Bundle -->
+    <script src="https://sdc-alex-bundle.s3-us-west-2.amazonaws.com/bundle.js"></script>
   </body>
 </html>

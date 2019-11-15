@@ -16,6 +16,7 @@ app.use('/api/song/:id/comments', proxy({ target: 'http://ec2-13-56-194-113.us-w
 
 app.use('/song/:id', proxy({ target: 'http://ec2-18-222-200-230.us-east-2.compute.amazonaws.com/' }));
 
+app.use('/songs/:id', proxy({ target: 'http://ec2-34-208-139-238.us-west-2.compute.amazonaws.com'}));
 
 app.get('/', (_, response) => {
   response.send(express.static(__dirname, '..', 'public', 'index.html'));

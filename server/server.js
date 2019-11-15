@@ -24,13 +24,6 @@ app.get('/', (_, response) => {
   response.send(express.static(__dirname, '..', 'public', 'index.html'));
 });
 
-app.get('/api/song/:id/comments', (req, res, next) => {
-  const url = `http://localhost:3050/api/song/${req.params.id}/comments`
-  rp(url)
-    .then(data => res.send(data))
-    .catch(err => next(err))
-})
-
 app.listen(port, () => {
   console.log('Proxy server is up and running on port', port);
 });

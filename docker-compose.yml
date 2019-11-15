@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  active-display-proxy:
+    build: .
+    ports: 
+      - '3059:3059'

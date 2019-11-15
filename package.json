@@ -4,6 +4,7 @@
   "description": "SoundClout Proxy Server (quetzalcaotl)",
   "main": "index.js",
   "scripts": {
+    "start": "NODE_ENV=production node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server/server.js"
   },
@@ -22,6 +23,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "http-proxy-middleware": "^0.20.0",
+    "newrelic": "^6.1.0",
     "path": "^0.12.7",
     "request": "^2.88.0",
     "request-promise": "^4.2.5"

@@ -18,6 +18,8 @@ app.use('/song/:id', proxy({ target: 'http://ec2-18-222-200-230.us-east-2.comput
 
 app.use('/songs/:id', proxy({ target: 'http://ec2-34-208-139-238.us-west-2.compute.amazonaws.com'}));
 
+app.use('/related_tracks/:id', proxy({ target: 'http://ec2-35-162-104-81.us-west-2.compute.amazonaws.com/' }));
+
 app.get('/', (_, response) => {
   response.send(express.static(__dirname, '..', 'public', 'index.html'));
 });

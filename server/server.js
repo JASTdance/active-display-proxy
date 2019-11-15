@@ -10,9 +10,12 @@ const port = 3059;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 
-app.use(express.static(path.resolve(__dirname,'..','public')));
+app.use(express.static(path.resolve(__dirname, '..', 'public')));
 
-app.use('/api/song/:id/comments', proxy({ target: 'http://ec2-13-56-194-113.us-west-1.compute.amazonaws.com/'}));
+app.use('/api/song/:id/comments', proxy({ target: 'http://ec2-13-56-194-113.us-west-1.compute.amazonaws.com/' }));
+
+app.use('/song/:id', proxy({ target: 'http://ec2-18-222-200-230.us-east-2.compute.amazonaws.com/' }));
+
 
 app.get('/', (_, response) => {
   response.send(express.static(__dirname, '..', 'public', 'index.html'));
